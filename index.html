@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Etch a Sketch</title>
+  </head>
+  <body>
+    <header id="temp">Etch-a-Sketch</header>
+
+    <div class="content">
+      <div class="navbar">
+        <div class="dropdown">
+          <div class="navcat">Pen Options</div>
+          <div class="navdrop">
+            <button class="navopt" style="padding-top: 3px">
+              Pen Colour :&nbsp;
+              <input type="color" id="pen-colour" />
+            </button>
+            <button class="navopt selectable-btn" id="colour-btn">
+              Colour
+            </button>
+            <button class="navopt selectable-btn" id="rainbow-btn">
+              Rainbow
+            </button>
+            <button class="navopt selectable-btn" id="eraser-btn">
+              Eraser
+            </button>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="navcat">Grid Options</div>
+          <div class="navdrop">
+            <button class="navopt" style="padding-top: 3px">
+              Grid Colour :&nbsp;
+              <input type="color" id="grid-colour" value="#ffffff" />
+            </button>
+            <button class="navopt selectable-btn" id="gridlines-btn">
+              Grid Lines
+            </button>
+            <button class="navopt">
+              Grid Size : <span id="dim-x">16</span> x
+              <span id="dim-y">16</span>
+              <br />
+              <input
+                type="range"
+                value="16"
+                min="1"
+                max="100"
+                id="grid-dimension"
+              />
+              <br />
+              <a id="reset-btn">Change Grid Size</a>
+              <span class="alert">* Current grid will be erased</span>
+            </button>
+            <button class="navopt" id="clear-btn">Clear Grid</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="grid" class="grid"></div>
+    </div>
+    <script src="./etch.js"></script>
+  </body>
+</html>
